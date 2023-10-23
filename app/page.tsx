@@ -3,8 +3,12 @@ import s from "./page.module.scss";
 import iconEmail from "./assets/img/Component 17.png";
 import iconPassword from "./assets/img/Component 18.png";
 import google from "./assets/img/google.png";
+import React, { useState, useRef } from 'react';
 
 export default function Login() {
+
+
+
   return (
     <div className={s.loginForm}>
       <div className={s.welcomeBack}>Welcome Back 👋🏼</div>
@@ -20,7 +24,9 @@ export default function Login() {
         <div className={s.forgot}>Forgot your password?</div>
       </div>
       <div className={s.areaButton}>
-        <button className={s.login}>Login</button>
+        <button className={s.login}>
+          <a href="./dashboard">Login</a>
+        </button>
         <div className={s.element}>or</div>
         <button className={s.signIn}>
           <Image className={s.iconGoogle} src={google} alt="" /> Sign in with
